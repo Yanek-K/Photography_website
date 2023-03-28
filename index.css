@@ -111,7 +111,7 @@ sup {
 /********** CSS ********/
 
 .title {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   font-family: "Fanwood Text";
   font-style: normal;
   font-variant: small-caps;
@@ -140,11 +140,11 @@ sup {
 
 .navbar a {
   text-align: center;
-  margin: 0.5rem 6rem 2rem;
+  margin: 0.5rem 6rem 1.5rem;
   color: #1b1b1b;
   padding: 12px;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-family: "Fanwood Text";
   letter-spacing: 0.1rem;
   font-style: normal;
@@ -153,9 +153,13 @@ sup {
   line-height: 20px;
 }
 
+.topnav a.icon {
+  display: none;
+}
+
 /* Style the slideshow container */
 .slideshow-container {
-  max-width: 48%;
+  max-width: 700px;
   position: relative;
   margin: auto;
 }
@@ -184,8 +188,23 @@ sup {
   font-size: 0.9rem;
 }
 
+.selected-work-images {
+  /* max-width: 1200px; */
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5rem;
+}
+
+.portfolio-layout {
+  flex: 50%;
+  max-width: 50%;
+  padding: 2rem 2rem;
+}
+
 /* Fading animation */
-.fade {
+/* .fade {
   animation-name: fade;
   animation-duration: 1.5s;
   animation-fill-mode: both;
@@ -198,5 +217,45 @@ sup {
   }
   to {
     opacity: 1;
+  }
+} */
+
+@media only screen and (max-width: 1000px) {
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+
+  .topnav a {
+    color: rgb(0, 0, 0);
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: rgb(255, 255, 255);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 3rem 2rem;
+  }
+
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: #04aa6d;
+    color: white;
+  }
+  .slideshow-container {
+    margin: 3rem auto 0rem;
   }
 }

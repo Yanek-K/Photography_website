@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="index.css" />
     <link
       rel="stylesheet"
@@ -13,20 +17,30 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap"
       rel="stylesheet"
     />
-    <title>Yanek K. Fine Art</title>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Yanek K. Photography</title>
   </head>
   <body>
     <!-- Title -->
-    <h1 class="title">YANEK K.</h1>
-    <h2 class="sub-title">FINE ART</h2>
+    <h1 class="title">Yanek K</h1>
+    <h2 class="sub-title">Photography</h2>
     <!-- Navigation bar -->
-    <nav class="navbar">
-      <a href="#">HOME</a>
-      <a href="#">SELECTED WORK</a>
-      <a href="#">ABOUT</a>
-      <a href="#">CONTACT</a>
-    </nav>
-
+    <div class="topnav">
+      <nav class="navbar" id="myLinks">
+        <a href="/">Home</a>
+        <a href="/pages/selected-work">Selected Work</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+      <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
     <!-- Slideshow container -->
     <div class="slideshow-container">
       <!-- Full-width images with number and caption text -->
@@ -36,7 +50,7 @@
         class="mySlides fade"
         style="width: 100%"
       />
-      <img
+      <!-- <img
         src="images/Abundant_waters.jpg"
         class="mySlides fade"
         style="width: 100%"
@@ -45,13 +59,13 @@
         src="images/Simple_things.jpg"
         class="mySlides fade"
         style="width: 100%"
-      />
+      /> -->
     </div>
     <div class="slidesText text">
       <p>A Place to Call Home</p>
       <p>2019</p>
     </div>
-    <div class="slidesText text">
+    <!-- <div class="slidesText text">
       <p>Abundant Waters</p>
       <p>2020</p>
     </div>
@@ -59,7 +73,7 @@
     <div class="slidesText text">
       <p>Simple things</p>
       <p>2017</p>
-    </div>
+    </div> -->
   </body>
   <script>
     var slideIndex = 1;
@@ -88,7 +102,7 @@
       }
       x[slideIndex - 1].style.display = "block";
 
-      // Set Slideshow for text
+      // Set Slideshow for Text
       var y = document.getElementsByClassName("slidesText");
       if (n > y.length) {
         slideIndex = 1;
